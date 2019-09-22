@@ -75,25 +75,25 @@
             </ul>
          </div>
       </nav>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/bootstrap.minb12b.js?ver=3.1.1'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/easing4e44.js?ver=1.3'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/jquery.parallaxc358.js?ver=1.1.3'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/select2/select2.min9d52.js?ver=3.5.1'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/owl-carousel/owl.carousel.min3ba1.js?ver=1.3.3'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/jquery.nanoscroller.min6b00.js?ver=3.4.0'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/jquery.mixitup.mine7f3.js?ver=2.1.7'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/TweenMax.min5152.js?ver=1.0'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/jquery.superscrollorama5152.js?ver=1.0'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/template62ea.js?ver=1.2'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min0147.js?ver=4.12'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min0147.js?ver=4.12'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/plugins/js_composer/assets/lib/vc_accordion/vc-accordion.min0147.js?ver=4.12'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/plugins/js_composer/assets/lib/vc-tta-autoplay/vc-tta-autoplay.min0147.js?ver=4.12'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/plugins/js_composer/assets/lib/bower/chartjs/Chart.min0147.js?ver=4.12'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/plugins/js_composer/assets/lib/vc_line_chart/vc_line_chart.min0147.js?ver=4.12'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/jquery.appear62d0.js?ver=4.5.3'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/themes/thebuilt/js/jquery.countTo62d0.js?ver=4.5.3'></script>
-      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/wp-content/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min0147.js?ver=4.12'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/bootstrap.minb12b.js?ver=3.1.1'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/easing4e44.js?ver=1.3'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/jquery.parallaxc358.js?ver=1.1.3'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/select2/select2.min9d52.js?ver=3.5.1'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/owl-carousel/owl.carousel.min3ba1.js?ver=1.3.3'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/jquery.nanoscroller.min6b00.js?ver=3.4.0'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/jquery.mixitup.mine7f3.js?ver=2.1.7'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/TweenMax.min5152.js?ver=1.0'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/jquery.superscrollorama5152.js?ver=1.0'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/template62ea.js?ver=1.2'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/plugins/js_composer/assets/js/dist/js_composer_front.min0147.js?ver=4.12'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/plugins/js_composer/assets/lib/waypoints/waypoints.min0147.js?ver=4.12'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/plugins/js_composer/assets/lib/vc_accordion/vc-accordion.min0147.js?ver=4.12'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/plugins/js_composer/assets/lib/vc-tta-autoplay/vc-tta-autoplay.min0147.js?ver=4.12'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/plugins/js_composer/assets/lib/bower/chartjs/Chart.min0147.js?ver=4.12'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/plugins/js_composer/assets/lib/vc_line_chart/vc_line_chart.min0147.js?ver=4.12'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/jquery.appear62d0.js?ver=4.5.3'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/assets/foundation/js/jquery.countTo62d0.js?ver=4.5.3'></script>
+      <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/resources/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min0147.js?ver=4.12'></script>
       <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/js/custom.js'></script>
       <?php wp_footer(); ?>
    </body>

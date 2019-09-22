@@ -20,7 +20,7 @@ get_header();
                         <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
                            <!-- Breadcrumb NavXT 5.4.0 -->
                            <span property="itemListElement" typeof="ListItem">
-                              <a property="item" typeof="WebPage" title="Go to TheBuilt." href="http://wp.magnium-themes.com/thebuilt/thebuilt-1" class="home"><span property="name">Home</span></a>
+                              <a property="item" typeof="WebPage" title="Go to Rax" href="/" class="home"><span property="name">Home</span></a>
                               <meta property="position" content="1">
                            </span>
                            &gt; 
@@ -64,6 +64,9 @@ get_header();
                            </div>
                            <div class="post-content">
                               <h2 class="entry-title post-header-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                              <div class="post-info">
+						               <span><i class="fa fa-file-text-o"></i><?php the_date(); ?></span>
+                              </div>
                               <!-- .entry-content -->
                               <div class="entry-content">
 							    <?php get_excerpt(the_content(), 20)?>
@@ -75,18 +78,22 @@ get_header();
                      </article>
 				  </div>
 				  <?php
-							}
-                            wp_reset_postdata();
-                        }
-                   ?>
-
+							}  
+               ?>
                   <nav role="navigation" id="nav-below" class="navigation-paging">
                      <div class="row">
                         <div class="col-md-12">
-                           
+                        <div class="nav-previous alignleft"><?php previous_posts_link( 'Older posts' ); ?></div>
+                        <div class="nav-next alignright"><?php next_posts_link( 'Newer posts' ); ?></div>
                         </div>
                      </div>
                   </nav>
+               <?php 
+                     wp_reset_postdata();
+                  } else {
+                     echo '<h2><center>No news available!</center></h2>';
+                  }
+               ?>
                   <!-- #nav-below -->
                </div>
                <div class="col-md-3 main-sidebar sidebar">
@@ -97,12 +104,16 @@ get_header();
                         <div class="menu-blog-menu-container">
                            <ul id="menu-blog-menu" class="menu">
 						   <?php
-								   $categories = get_categories();
-								   foreach($categories as $item) {
+                           $categories = get_categories();
+                           if($categories) {
+								      foreach($categories as $item) {
 						   ?>
-                              <li class="menu-item menu-item-type-taxonomy"><a href="<?php echo site_url(). '/category/'. $item->slug; ?>"><?php echo $item->name; ?></a></li>
+                                 <li class="menu-item menu-item-type-taxonomy"><a href="<?php echo site_url(). '/category/'. $item->slug; ?>"><?php echo $item->name; ?></a></li>
 							<?php
-							}
+                              }
+							      } else {
+                              echo '<p style="background-color: #fff;">No news available</p>';
+                           }
 							?>
                            </ul>
                         </div>

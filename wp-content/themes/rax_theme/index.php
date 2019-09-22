@@ -3,10 +3,16 @@
     * Template Name: Homepage
     */
 get_header(); ?>
-      <div class="owl-carousel owl-theme heroSlider">
-		   <div style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpg') no-repeat center; background-size: cover; padding: 15em;"></div>
-         <div style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpg') no-repeat center; background-size: cover; padding: 15em;"></div>
-         <div style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpg') no-repeat center; background-size: cover; padding: 15em;"></div>
+      <div id="heroSlider">
+         <?php
+            $slider = get_field('field_5d8794668f23b');
+            foreach($slider as $item) {
+         ?>
+		   <div class="item" style="background: url('<?php echo $item['slider_image']; ?>') no-repeat center; background-size: cover; padding: 18em; width: 100%;"></div>
+         <?php
+            }
+         ?>
+         
       </div>
       <div class="content-block  stick-to-footer">
          <div class="page-container container">
@@ -124,110 +130,39 @@ get_header(); ?>
                                     <h2 class="mgt-header-block-title">Featured works</h2>
                                     <div class="mgt-header-line"></div>
                                  </div>
-                                 <div class="row portfolio-filter filter-left filter-bordered">
-                                    <div class="col-md-12">
-                                       <a class="filter" data-filter="all">All</a><a class="filter" data-filter=".building">Building</a><a class="filter" data-filter=".consulting">Consulting</a><a class="filter" data-filter=".interior">Interior</a><a class="filter" data-filter=".office">Office</a>
-                                    </div>
-                                 </div>
+
                                  <div class="portfolio-list portfolio-columns-4 portfolio-grid-layout-3 clearfix" id="portfolio-list">
-                                    <div class="portfolio-item-block portfolio-item-animation-6 mix building" data-item="1" data-name="Modern House">
+                                    <?php 
+                                       $args = array( 
+                                          'post_type' => 'projects',
+                                          'posts_per_page' => 8
+                                       );
+                                       $the_query = new WP_Query( $args );
+                                       if($the_query->have_posts()) { 
+                                          while($the_query->have_posts()) { 
+                                             $the_query->the_post();                        
+                                       ?>
+
+                                    <div class="portfolio-item-block portfolio-item-animation-6" data-item="1" data-name="Modern House">
                                        <div class="portfolio-item-block-inside">
-                                          <a href="project/modern-house/index.html" target="_self" rel="" title="Modern House">
-                                             <div class="portfolio-item-image" data-style="background-image: url(http://wp.magnium-themes.com/thebuilt/thebuilt-1/wp-content/uploads/2016/03/photodune-3979102-superb-backyard-m-1024x754.jpg);"></div>
+                                          <a href="<?php the_permalink(); ?>" target="_self" rel="" title="<?php the_title(); ?>">
+                                             <div class="portfolio-item-image" data-style="background-image: url('<?php the_post_thumbnail_url() ?>');"></div>
                                              <div class="portfolio-item-bg"></div>
                                              <div class="info">
-                                                <span class="sub-title">Building</span>
-                                                <h4 class="title">Modern House</h4>
-                                                <div class="project-description">Melbourne, Australia</div>
+
+                                                <h4 class="title"><?php the_title(); ?></h4>
                                                 <div class="view-more btn mgt-button">View more</div>
                                              </div>
                                           </a>
                                        </div>
                                     </div>
-                                    <div class="portfolio-item-block portfolio-item-animation-6 mix building" data-item="2" data-name="House in Florida">
-                                       <div class="portfolio-item-block-inside">
-                                          <a href="project/house-in-florida/index.html" target="_self" rel="" title="House in Florida">
-                                             <div class="portfolio-item-image" data-style="background-image: url(http://wp.magnium-themes.com/thebuilt/thebuilt-1/wp-content/uploads/2016/03/photodune-1697621-3d-house-isolated-on-white-rendered-generic-m-1024x1024.jpg);"></div>
-                                             <div class="portfolio-item-bg"></div>
-                                             <div class="info">
-                                                <span class="sub-title">Building</span>
-                                                <h4 class="title">House in Florida</h4>
-                                                <div class="project-description">Florida</div>
-                                                <div class="view-more btn mgt-button">View more</div>
-                                             </div>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <div class="portfolio-item-block portfolio-item-animation-6 mix building" data-item="3" data-name="Architecture and Design">
-                                       <div class="portfolio-item-block-inside">
-                                          <a href="project/architecture-and-design/index.html" target="_self" rel="" title="Architecture and Design">
-                                             <div class="portfolio-item-image" data-style="background-image: url(http://wp.magnium-themes.com/thebuilt/thebuilt-1/wp-content/uploads/2016/03/photodune-5893828-downtown-dubai-m-1024x787.jpg);"></div>
-                                             <div class="portfolio-item-bg"></div>
-                                             <div class="info">
-                                                <span class="sub-title">Building</span>
-                                                <h4 class="title">Architecture and Design</h4>
-                                                <div class="project-description">Barcelona, Spain</div>
-                                                <div class="view-more btn mgt-button">View more</div>
-                                             </div>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <div class="portfolio-item-block portfolio-item-animation-6 mix building" data-item="1" data-name="Family house">
-                                       <div class="portfolio-item-block-inside">
-                                          <a href="project/family-house/index.html" target="_self" rel="" title="Family house">
-                                             <div class="portfolio-item-image" data-style="background-image: url(http://wp.magnium-themes.com/thebuilt/thebuilt-1/wp-content/uploads/2016/03/photodune-3979163-house-interior-m-1024x673.jpg);"></div>
-                                             <div class="portfolio-item-bg"></div>
-                                             <div class="info">
-                                                <span class="sub-title">Building</span>
-                                                <h4 class="title">Family house</h4>
-                                                <div class="project-description">Milan, Italy</div>
-                                                <div class="view-more btn mgt-button">View more</div>
-                                             </div>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <div class="portfolio-item-block portfolio-item-animation-6 mix consulting" data-item="2" data-name="Construction consulting">
-                                       <div class="portfolio-item-block-inside">
-                                          <a href="project/construction-consulting/index.html" target="_self" rel="" title="Construction consulting">
-                                             <div class="portfolio-item-image" data-style="background-image: url(http://wp.magnium-themes.com/thebuilt/thebuilt-1/wp-content/uploads/2016/03/photodune-304719-office-building-m-1024x777.jpg);"></div>
-                                             <div class="portfolio-item-bg"></div>
-                                             <div class="info">
-                                                <span class="sub-title">Consulting</span>
-                                                <h4 class="title">Construction consulting</h4>
-                                                <div class="project-description">Status: Completed</div>
-                                                <div class="view-more btn mgt-button">View more</div>
-                                             </div>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <div class="portfolio-item-block portfolio-item-animation-6 mix building office" data-item="3" data-name="Office interior">
-                                       <div class="portfolio-item-block-inside">
-                                          <a href="project/office-interior/index.html" target="_self" rel="" title="Office interior">
-                                             <div class="portfolio-item-image" data-style="background-image: url(http://wp.magnium-themes.com/thebuilt/thebuilt-1/wp-content/uploads/2016/03/photodune-1288999-house-interior-m-1024x780.jpg);"></div>
-                                             <div class="portfolio-item-bg"></div>
-                                             <div class="info">
-                                                <span class="sub-title">Building / Office</span>
-                                                <h4 class="title">Office interior</h4>
-                                                <div class="project-description">Completed: September 2015</div>
-                                                <div class="view-more btn mgt-button">View more</div>
-                                             </div>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <div class="portfolio-item-block portfolio-item-animation-6 mix building" data-item="1" data-name="Green House">
-                                       <div class="portfolio-item-block-inside">
-                                          <a href="project/green-house/index.html" target="_self" rel="" title="Green House">
-                                             <div class="portfolio-item-image" data-style="background-image: url(http://wp.magnium-themes.com/thebuilt/thebuilt-1/wp-content/uploads/2016/03/photodune-5004243-luxury-home-m-1024x780.jpg);"></div>
-                                             <div class="portfolio-item-bg"></div>
-                                             <div class="info">
-                                                <span class="sub-title">Building</span>
-                                                <h4 class="title">Green House</h4>
-                                                <div class="project-description">Client: Awesome Company Location: Barcelone, Spain</div>
-                                                <div class="view-more btn mgt-button">View more</div>
-                                             </div>
-                                          </a>
-                                       </div>
-                                    </div>
+                                    <?php
+                                          }
+                                       wp_reset_postdata();
+                                    }
+                                 ?>
+
+
                                  </div>
                                  <script>(function($){
                                     $(document).ready(function() {

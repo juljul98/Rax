@@ -2,21 +2,16 @@
 
 var $ = jQuery;
 $(document).ready(function(){
-
-    $('.heroSlider').owlCarousel({
+    $('#cred').autoHeight({
+      selector: ['.autoheight']
+    });
+    $('#heroSlider').owlCarousel({
       loop: true,
       autoplay:true,
-      autoplayTimeout:3000,
-      autoplayHoverPause:true,
-      animateIn: 'fadeIn',
-      animateOut: 'fadeOut',
+      items: 1,
+      itemsDesktop: [1024,1],
+      itemsTablet: [992,1],
+      itemsMobile : [480,1],
       dots: true,
-      responsive : {
-        // breakpoint from 0 up
-        0 : {
-          items: 1,
-        }
-      }
     });
-
 });
