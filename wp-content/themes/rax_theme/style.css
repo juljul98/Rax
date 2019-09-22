@@ -1,0 +1,71 @@
+/*
+ Theme Name:   Rax Theme
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Rax Engineering Theme
+ Author:       Blueinspires PH
+
+*/
+
+.red {
+    color: #ee161d;
+}
+
+.blue {
+    color: #3c44cb;
+}
+
+.header-left.logo p {
+    width: 160px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000;
+}
+
+.sticky-header.fixed .header-left.logo img {
+    width: 80px;
+}
+
+header.fixed {
+    padding: 5px 0;
+}
+
+.vc_tta.vc_general .vc_tta-panel-body,
+.vc_tta.vc_general .vc_tta-panel-title>a {
+    padding: 25px 20px;
+}
+
+#footer-sidebar-2 .pull-right {
+    float: left!important;
+}
+
+body .owl-theme .owl-controls .owl-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    margin: 0; 
+}
+
+.vc_tta-color-black.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading:hover {
+    background-color: #ee161d;
+}
+
+.mgt-cta-block-content ul {
+    margin-bottom: 0;
+}
+
+.mgt-icon-box {
+    margin: 0!important;
+}
+
+form label {
+    display: block;
+}
+
+.contact-details p i {
+    font-size: 24px;
+    width: 50px;
+    text-align: center;
+}
