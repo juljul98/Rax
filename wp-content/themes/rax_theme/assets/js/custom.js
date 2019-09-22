@@ -5,13 +5,18 @@ $(document).ready(function(){
 
     $('.heroSlider').owlCarousel({
       loop: true,
-      items: 1,
       autoplay:true,
       autoplayTimeout:3000,
       autoplayHoverPause:true,
       animateIn: 'fadeIn',
       animateOut: 'fadeOut',
       dots: true,
+      responsive : {
+        // breakpoint from 0 up
+        0 : {
+          items: 1,
+        }
+      }
     });
 
 });

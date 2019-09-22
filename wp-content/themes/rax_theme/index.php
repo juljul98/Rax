@@ -20,8 +20,8 @@ get_header(); ?>
                               <div class="wpb_wrapper">
                                  <div class="mgt-cta-block clearfix black-text with-text no-side-paddings wpb_content_element">
                                     <div class="mgt-button-wrapper mgt-button-wrapper-align-right mgt-button-wrapper-display-newline mgt-button-top-margin-disable"><a class="btn hvr-bounce-to-right mgt-button mgt-style-solid mgt-size-normal mgt-align-right mgt-display-newline mgt-text-size-normal mgt-button-icon-position-left mgt-text-transform-uppercase " href="get-a-quote/index.html">Get a quote</a></div>
-                                    <h5 class="mgt-cta-block-header" style="margin-bottom: 20px;"><?php echo get_field('home_heading'); ?></h5>
-                                    <div class="mgt-cta-block-content"><?php echo get_field('home_sub_heading'); ?></div>
+                                    <h5 class="mgt-cta-block-header" style="margin-bottom: 20px;"><?php the_field('home_heading'); ?></h5>
+                                    <div class="mgt-cta-block-content"><?php the_field('home_sub_heading'); ?></div>
                                  </div>
                               </div>
                            </div>
